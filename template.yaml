@@ -4,12 +4,11 @@ Description: Serverless FastAPI app that returns S3 presigned URLs
 
 Globals:
   Function:
-    Runtime: python3.13
+    Runtime: python3.12
     Timeout: 10
     MemorySize: 128
     Environment:
       Variables:
-        AWS_REGION: us-east-1
         S3_BUCKET: vodfun
         URL_EXPIRES_SECONDS: 300
 
@@ -40,6 +39,6 @@ Resources:
 Outputs:
   ApiGatewayUrl:
     Description: "Base URL for the Slideshow API"
-    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+    Value: !Sub "https://${SlideshowApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
     Export:
       Name: SlideshowApiUrl-Fastly
