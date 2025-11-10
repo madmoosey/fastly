@@ -32,7 +32,7 @@ app.add_middleware(
 
 MEDIA_EXTENSIONS = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".mp4", ".webm", ".mov", ".avi")
 
-@app.get("/")
+@app.get("api/")
 def root():
     return {"message": "Serverless Slideshow API (Python) ✅"}
 
