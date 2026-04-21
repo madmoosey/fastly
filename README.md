@@ -1,2 +1,0 @@
-# fastly
-FastAPI Lightweight Server
